@@ -1,0 +1,52 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="country.css">
+  </head>
+  <body>
+       <main class="main">
+            <header class="header">
+                <h1 class="heading">Where in the world?</h1>
+                <div class="themeHolder" id="themeSwitcher" data-theme-picker> 
+                    <img src="./images/output-onlinepngtools.png" alt="Moon" class="moon">
+                    <button class="themeSwitcher"></button>
+                </div>
+
+            </header>
+    
+            <section class="section">
+                <nav class="nav">
+                    <input placeholder="Search for a country..." type="text" class="inputSearch" id="input" onkeydown="return /[a-z ]/i.test(event.key)">
+                    <img src="./images/search-sharp.png" alt="Search" class="searchIcon">
+                </nav>
+
+                <aside class="menu">
+                    <div class="custom-select-wrapper">
+                      <select name="filter" class="filter" id="filter">
+                        <option value="default" class="option" selected disabled hidden>Filter by Region</option>
+                        <option value="All" class="option">All</option>
+                        <option value="Africa" class="option">Africa</option>
+                        <option value="Americas" class="option">Americas</option>
+                        <option value="Asia" class="option">Asia</option>
+                        <option value="Europe" class="option">Europe</option>
+                        <option value="Oceania" class="option">Oceania</option>
+                      </select>
+                      <img src="./images/icon-arrow-down.svg" alt="Arrow" class="custom-arrow" id="customArrow">
+                    </div>
+                </aside>
+            </section>
+
+            <section class="fetchSection" id="fetchSection"></section>
+            <div class="popUp hidden" id="popUp">
+                <button class="popUpButton" id="backButton"><span class="backButtonArrow">&#129104;</span>Back</button>
+                <div class="popUpNoButton"></div>
+            </div>
+        </main>
+        <script src="country.js"></script>
+        <script src="dropdwn.js"></script>
+        <script src="theme.js"></script>
+  </body>
+  </html>
